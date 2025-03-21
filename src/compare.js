@@ -85,7 +85,7 @@ async function compareImages(image1Path, image2Path) {
                     "x1": 123, "y1": 456, "x2": 789, "y2": 101
                   },
                   "highlight_area": {
-                    "x1": 113, "y1": 446, "x2": 799, "y2": 111
+                    "x1": 150, "y1": 446, "x2": 799, "y2": 111
                   },
                   "before": "text before",
                   "after": "text after"
@@ -231,7 +231,7 @@ async function createHighlightedImage(imagePath, differences, processedDims) {
         const { x1, y1, x2, y2 } = diff.highlight_area;
 
         // Scale bounding box to match the actual image dimensions
-        const xOffset = -8;  // Try negative values to move left (adjust as needed)
+        const xOffset = -20; 
         const yOffset = 0;
         const scaledX1 = Math.max(0, (x1 * scaleX) + xOffset);
         const scaledY1 = Math.max(0, (y1 * scaleY) + yOffset);
